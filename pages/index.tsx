@@ -1,18 +1,18 @@
-"use client"
+"use client";
 
-import Image from 'next/image'
-import Link from 'next/link'
-import { Suspense } from 'react'
-import Methods from '@/components/methods'
-import TablePlaceholder from '@/components/table-placeholder'
-import ExpandingArrow from '@/components/expanding-arrow'
+import Image from "next/image";
+import Link from "next/link";
+import { Suspense } from "react";
+import Methods from "@/components/methods";
+import TablePlaceholder from "@/components/table-placeholder";
+import ExpandingArrow from "@/components/expanding-arrow";
 import Account from "../components/account";
 import useEagerConnect from "../hooks/useEagerConnect";
 
 // Prisma does not support Edge without the Data Proxy currently
 // export const runtime = 'edge'
-export const preferredRegion = 'home'
-export const dynamic = 'force-dynamic'
+export const preferredRegion = "home";
+export const dynamic = "force-dynamic";
 
 export default function Home() {
   const triedToEagerConnect = useEagerConnect();
@@ -23,20 +23,19 @@ export default function Home() {
         <Account triedToEagerConnect={triedToEagerConnect} />
       </header>
 
-      <main className="relative flex min-h-screen flex-col items-center justify-center">
+      <main className="relative flex flex-col items-center justify-center min-h-screen">
         <Link href="/">
-          <h1 className="pt-4 pb-8 bg-gradient-to-br from-black via-[#171717] to-[#575757] bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl">
-            GBR Swap Token
+          <h1 className="pt-4 pb-8 text-3xl font-medium tracking-tight text-center md:text-7xl">
+           DAPP
           </h1>
         </Link>
         <Methods />
-        <p className="font-light text-gray-600 w-full max-w-lg text-center mt-6">
+        <p className="w-full max-w-lg mt-6 font-light text-center text-gray-600">
           This is a demo version of a decentralized NextJS application
         </p>
 
-        <div className="sm:absolute sm:bottom-0 w-full px-20 py-10 flex justify-between">
-          <Link href="#">
-          </Link>
+        <div className="flex justify-between w-full px-20 py-10 sm:absolute sm:bottom-0">
+          <Link href="#"></Link>
           <Link
             href="https://github.com/OpenDevCommune/gbr-swap-token-dapp"
             className="flex items-center space-x-2"
@@ -53,5 +52,5 @@ export default function Home() {
         </div>
       </main>
     </>
-  )
+  );
 }

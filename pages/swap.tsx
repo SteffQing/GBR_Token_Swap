@@ -23,18 +23,18 @@ export default function Swap() {
         <Account triedToEagerConnect={triedToEagerConnect} />
       </header>
 
-      <main className="relative flex min-h-screen flex-col items-center justify-center">
+      <main className="relative flex flex-col items-center justify-center min-h-screen">
         <Link href="/">
-          <h1 className="pt-4 pb-8 bg-gradient-to-br from-black via-[#171717] to-[#575757] bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl">
-            GBR Swap Token
+          <h1 className="pt-4 pb-8 text-4xl font-medium tracking-tight text-center text-transparent md:text-7xl">
+            DAPP
           </h1>
         </Link>
         <SwapMethod />
-        <p className="font-light text-gray-600 w-full max-w-lg text-center mt-6">
+        <p className="w-full max-w-lg mt-6 font-light text-center text-gray-600">
           This is a demo version of a decentralized NextJS application
         </p>
 
-        <div className="sm:absolute sm:bottom-0 w-full px-20 py-10 flex justify-between">
+        <div className="flex justify-between w-full px-20 py-10 sm:absolute sm:bottom-0">
           <Link href="#">
           </Link>
           <Link

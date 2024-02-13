@@ -1,13 +1,20 @@
+import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+
 import type { BigNumberish } from "@ethersproject/bignumber";
 import { formatUnits } from "@ethersproject/units";
 
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
+
 export function shortenHex(hex: string, length = 4) {
   return `${hex.substring(0, length + 2)}…${hex.substring(
-    hex.length - length
+    hex.length - length,
   )}`;
 }
 
-const ETHERSCAN_PREFIXES: {[key: number]: string} = {
+const ETHERSCAN_PREFIXES: { [key: number]: string } = {
   1: "",
   3: "ropsten.",
   4: "rinkeby.",
@@ -17,9 +24,9 @@ const ETHERSCAN_PREFIXES: {[key: number]: string} = {
 
 export function formatEtherscanLink(
   type: "Account" | "Transaction",
-  data: [number, string]
+  data: [number, string],
 ) {
-  switch (type) {   
+  switch (type) {
     case "Account": {
       const [chainId, address] = data;
       return `https://${ETHERSCAN_PREFIXES[chainId]}etherscan.io/address/${address}`;
@@ -34,7 +41,7 @@ export function formatEtherscanLink(
 export function parseBalance(
   value: BigNumberish,
   decimals = 18,
-  decimalsToDisplay = 3
+  decimalsToDisplay = 3,
 ) {
   return parseFloat(formatUnits(value, decimals)).toFixed(decimalsToDisplay);
 }
