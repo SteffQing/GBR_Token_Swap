@@ -6,21 +6,21 @@ import { ArrowLeft } from "lucide-react";
 
 export default function Header() {
   return (
-    <div className="fixed inset-x-0 flex items-center justify-center w-full h-0 ">
-      <Container maxWidth="7xl">
-        <div className="relative w-16 h-6">
+    <div className="fixed inset-x-0 flex items-center justify-center w-full h-12 py-12">
+      <Container maxWidth="7xl" className="flex items-center justify-between">
+        <div className="relative w-20 h-8">
           <Image
             src="/assets/logo.svg"
             fill
             alt="logo"
-            className="object-cover"
+            className="object-contain"
           />
         </div>
 
         <div>
-            <Button>
-             <ArrowLeft className="w-4 h-4 mr-2"/>   Go to main site
-            </Button>
+          <Button>
+            <ArrowLeft className="w-4 h-4 mr-2" /> Go to main site
+          </Button>
         </div>
       </Container>
     </div>

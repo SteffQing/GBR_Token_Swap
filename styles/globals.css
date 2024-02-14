@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: 240 10% 3.9%;
+    --background: 202 100% 11%;
     --foreground: 0 0% 98%;
     --card: 240 10% 3.9%;
     --card-foreground: 0 0% 98%;
@@ -27,6 +27,11 @@
     --radius: 0.5rem;
   }
 }
+
+/* bggradient1 105390 */
+
+/* bggradient2  109034 */
+
 
 @layer base {
   * {
