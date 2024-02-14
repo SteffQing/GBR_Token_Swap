@@ -6,7 +6,10 @@ import { Container } from "../ui/container";
 function Footer() {
   return (
     <div className="fixed inset-x-0 bottom-0 flex items-center justify-center w-full h-20 bg-background">
-      <Container maxWidth="7xl" className="grid grid-cols-3">
+      <Container
+        maxWidth="7xl"
+        className="flex items-center justify-between px-6 lg:grid lg:grid-cols-3 lg:px-0"
+      >
         <div className="relative w-20 h-8">
           <Image
             src="/assets/logo.svg"

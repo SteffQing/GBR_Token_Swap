@@ -56,8 +56,8 @@ export default function Home() {
           maxWidth="7xl"
           className="flex flex-col items-center py-7  border rounded-md min-h-[300px] bg-background/20 backdrop-blur-md"
         >
-          <div className="flex items-center justify-center w-3/5 px-16 py-2 bg-gradient-to-r from-background/20 via-slate-100/50 to-background/20 backdrop-blur-md">
-            <p>
+          <div className="flex items-center justify-center w-full px-16 py-2 lg:w-3/5 bg-gradient-to-r from-background/20 via-slate-100/50 to-background/20 backdrop-blur-md">
+            <p className="text-sm lg:text-[1rem] whitespace-nowrap">
               Exchange Rates: 1 000 000 USDT ={" "}
               <span className="text-[#e2ac36]">1 GBR</span>
             </p>
@@ -66,7 +66,7 @@ export default function Home() {
           <div className="flex flex-col items-center w-full">
             {/* headers */}
             {/* tabs header */}
-            <div className="relative flex flex-col items-center w-[1000px]">
+            <div className="relative flex flex-col items-center w-[385px] lg:w-[1000px]">
               <div className="grid grid-cols-3 gap-4">
                 {" "}
                 {tabHeaders.map((item, i) => {
@@ -99,8 +99,8 @@ export default function Home() {
               </div>
 
               {/* line */}
-              <div className="absolute inset-x-0 bottom-0">
-                <div className="w-[1000px] h-[3px] relative">
+              <div className="absolute inset-x-0 bottom-0 ">
+                <div className="w-[385px] lg:w-[1000px] h-[3px] relative">
                   <Image
                     src="/assets/line.svg"
                     fill
