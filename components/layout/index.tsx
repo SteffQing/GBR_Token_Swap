@@ -6,7 +6,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="bg-cover min-h-screen bg-[url('/assets/sitebg.svg')]">
       <Header />
-      <div className="min-h-screen">{children}</div>
+      <main className="min-h-screen">{children}</main>
       <Footer />
     </div>
   );

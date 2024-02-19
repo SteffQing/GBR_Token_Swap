@@ -10,6 +10,7 @@ import Account from "../components/account";
 import useEagerConnect from "../hooks/useEagerConnect";
 import { Container } from "@/components/ui/container";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import StakingTab from "@/components/tabs/staking";
 
 // Prisma does not support Edge without the Data Proxy currently
 // export const runtime = 'edge'
@@ -43,18 +44,18 @@ export default function Home() {
 
   return (
     <>
-      <main className="relative flex flex-col items-center justify-center min-h-screen">
-        <header>
+      <main className="relative flex flex-col items-center justify-center min-h-screen lg:mb-12">
+        {/* <header>
           <Account triedToEagerConnect={triedToEagerConnect} />
-        </header>
-        <h1 className="pt-4 pb-8 text-3xl font-medium tracking-tight text-center">
+        </header> */}
+        <h1 className="pt-4  text-3xl font-medium tracking-tight text-center">
           DAPP
         </h1>
         {/* <Methods /> */}
 
         <Container
           maxWidth="7xl"
-          className="flex flex-col items-center py-7  border rounded-md min-h-[300px] bg-background/20 backdrop-blur-md"
+          className="flex flex-col items-center py-7 gap-12 border rounded-md min-h-[300px] bg-background/20 backdrop-blur-md"
         >
           <div className="flex items-center justify-center w-full px-16 py-2 lg:w-3/5 bg-gradient-to-r from-background/20 via-slate-100/50 to-background/20 backdrop-blur-md">
             <p className="text-sm lg:text-[1rem] whitespace-nowrap">
@@ -74,7 +75,7 @@ export default function Home() {
                     <div
                       key={i}
                       onClick={() => setCurrTab(item.ticker)}
-                      className="flex flex-col items-center cursor-pointer"
+                      className="flex flex-col items-center cursor-pointer hover:text-orange-400 hover:scale-105 transition-all duration-150"
                     >
                       <p
                         className={`${
@@ -113,9 +114,7 @@ export default function Home() {
             {/* body */}
             <div>
               {currTab == tabs.stacking ? (
-                <div className="min-h-[100px] text-center flex items-center justify-center ">
-                  <p>STACKING</p>
-                </div>
+                <StakingTab />
               ) : currTab == tabs.getGbr ? (
                 <div className="min-h-[100px] text-center flex items-center justify-center">
                   <p>GET GBR TOKEN</p>
