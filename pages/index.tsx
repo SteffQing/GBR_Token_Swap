@@ -11,6 +11,7 @@ import useEagerConnect from "../hooks/useEagerConnect";
 import { Container } from "@/components/ui/container";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import StakingTab from "@/components/tabs/staking";
+import GetGbrTab from "@/components/tabs/getGbr";
 
 // Prisma does not support Edge without the Data Proxy currently
 // export const runtime = 'edge'
@@ -25,7 +26,7 @@ enum tabs {
 
 const tabHeaders = [
   {
-    title: "Stacking",
+    title: "Staking",
     ticker: tabs.stacking,
   },
   {
@@ -116,9 +117,7 @@ export default function Home() {
               {currTab == tabs.stacking ? (
                 <StakingTab />
               ) : currTab == tabs.getGbr ? (
-                <div className="min-h-[100px] text-center flex items-center justify-center">
-                  <p>GET GBR TOKEN</p>
-                </div>
+                <GetGbrTab />
               ) : (
                 currTab == tabs.buyTicket && (
                   <div className="min-h-[100px] text-center flex items-center justify-center">
@@ -126,7 +125,7 @@ export default function Home() {
                   </div>
                 )
               )}
-            </div>
+            </div> 
           </div>
         </Container>
       </main>
