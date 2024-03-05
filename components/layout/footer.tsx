@@ -5,7 +5,7 @@ import { Container } from "../ui/container";
 
 function Footer() {
   return (
-    <div className="fixed inset-x-0 bottom-0 flex items-center justify-center w-full h-20 bg-background px-5 md:px-8 lg:px-10">
+    <div className="fixed bottom-0 flex items-center justify-center w-full h-20 bg-background px-5 md:px-8 lg:px-10">
       <Container
         maxWidth="7xl"
         className="flex items-center px-6 lg:grid lg:grid-cols-3 lg:px-0"

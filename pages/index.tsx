@@ -45,7 +45,7 @@ export default function Home() {
 
   return (
     <>
-      <main className="relative flex flex-col items-center pt-[6rem] px-5 md:px-8 lg:px-10 min-h-screen lg:mb-12">
+      <main className="relative flex flex-col items-center pt-[6rem] md:px-8 lg:px-10 min-h-screen lg:mb-12">
         {/* <header>
           <Account triedToEagerConnect={triedToEagerConnect} />
         </header> */}
@@ -56,7 +56,7 @@ export default function Home() {
 
         <Container
           maxWidth="7xl"
-          className="flex flex-col items-center py-7 gap-12 border rounded-[1rem] min-h-[300px] bg-background/20 backdrop-blur-md"
+          className="flex flex-col items-center py-7 gap-12 border md:rounded-[1rem] min-h-[300px] bg-background/20 backdrop-blur-md"
         >
           <div className="flex items-center justify-center w-full px-16 py-2 lg:w-3/5 bg-gradient-to-r from-background/20 via-slate-100/50 to-background/20 backdrop-blur-md">
             <p className="text-sm lg:text-[1rem] whitespace-nowrap">
@@ -68,7 +68,7 @@ export default function Home() {
           <div className="flex flex-col items-center w-full">
             {/* headers */}
             {/* tabs header */}
-            <div className="relative flex flex-col items-center w-[385px] lg:w-[1000px]">
+            <div className="relative flex flex-col items-center w-[300px] lg:w-[1000px]">
               <div className="grid grid-cols-3 gap-4">
                 {" "}
                 {tabHeaders.map((item, i) => {
