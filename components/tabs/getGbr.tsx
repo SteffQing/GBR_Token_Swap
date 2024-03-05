@@ -1,28 +1,13 @@
 import React, { useState } from "react";
-import { Input } from "../ui/input";
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuPortal,
-  DropdownMenuSeparator,
-  DropdownMenuShortcut,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { ChevronDown, ArrowLeftRight } from "lucide-react";
+import { ArrowLeftRight } from "lucide-react";
 import CurrencySelect from "../currency-select";
-enum tokentype {
+export enum tokentype {
   tokenA = "tokenA",
   tokenB = "tokenB",
 }
 
-type swapTokenDetails = {
+export type swapTokenDetails = {
   tokenName: string;
   tokenAmount: string;
 };
@@ -51,16 +36,16 @@ export default function GetGbrTab() {
       }));
   };
 
-  const handleSetTokenType = (type: tokentype) => {
+  const handleSetTokenType = (tokenName: string, type: tokentype) => {
     if (type == tokentype.tokenA)
       setTokenA((props) => ({
         ...props,
-        tokenName: type,
+        tokenName: tokenName,
       }));
     else
       setTokenB((props) => ({
         ...props,
-        tokenName: type,
+        tokenName: tokenName,
       }));
   };
   return (
@@ -71,6 +56,8 @@ export default function GetGbrTab() {
         <CurrencySelect
           setToken={handleSetTokenType}
           setTokenAmount={handleSetTokenAmount}
+          token={tokenA}
+          _type={tokentype.tokenA}
         />
         <ArrowLeftRight className="w-6 h-6 text-orange-500 rotate-90 lg:rotate-0" />
         {/* rightside */}
@@ -78,29 +65,14 @@ export default function GetGbrTab() {
         <CurrencySelect
           setToken={handleSetTokenType}
           setTokenAmount={handleSetTokenAmount}
+          token={tokenB}
+          _type={tokentype.tokenB}
         />
       </div>
 
-      <Button variant="lemongradient" className="mx-auto">Exchange</Button>
+      <Button variant="lemongradient" className="mx-auto">
+        Exchange
+      </Button>
     </div>
   );
 }
-
-const balances = [
-  {
-    token: "GBR",
-    balance: "2000",
-  },
-  {
-    token: "BTC",
-    balance: "12000",
-  },
-  {
-    token: "USDT",
-    balance: "6000",
-  },
-  {
-    token: "GBR",
-    balance: "2000",
-  },
-];
