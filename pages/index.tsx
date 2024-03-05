@@ -45,18 +45,18 @@ export default function Home() {
 
   return (
     <>
-      <main className="relative flex flex-col items-center justify-center min-h-screen lg:mb-12">
+      <main className="relative flex flex-col items-center pt-[6rem] px-5 md:px-8 lg:px-10 min-h-screen lg:mb-12">
         {/* <header>
           <Account triedToEagerConnect={triedToEagerConnect} />
         </header> */}
-        <h1 className="pt-4  text-3xl font-medium tracking-tight text-center">
+        <h1 className="py-4  text-3xl font-medium tracking-tight text-center">
           DAPP
         </h1>
         {/* <Methods /> */}
 
         <Container
           maxWidth="7xl"
-          className="flex flex-col items-center py-7 gap-12 border rounded-md min-h-[300px] bg-background/20 backdrop-blur-md"
+          className="flex flex-col items-center py-7 gap-12 border rounded-[1rem] min-h-[300px] bg-background/20 backdrop-blur-md"
         >
           <div className="flex items-center justify-center w-full px-16 py-2 lg:w-3/5 bg-gradient-to-r from-background/20 via-slate-100/50 to-background/20 backdrop-blur-md">
             <p className="text-sm lg:text-[1rem] whitespace-nowrap">
@@ -125,7 +125,7 @@ export default function Home() {
                   </div>
                 )
               )}
-            </div> 
+            </div>
           </div>
         </Container>
       </main>

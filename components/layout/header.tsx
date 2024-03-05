@@ -6,7 +6,7 @@ import { ArrowLeft } from "lucide-react";
 
 export default function Header() {
   return (
-    <div className="fixed z-50 inset-x-0 flex items-center justify-center w-full h-12 py-12">
+    <div className="fixed z-50 inset-x-0 flex items-center justify-center w-full h-12 py-12 px-5 md:px-8 lg:px-10">
       <Container
         maxWidth="7xl"
         className="flex items-center justify-between px-6 lg:px-0"
